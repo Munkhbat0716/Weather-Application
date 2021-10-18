@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to top right, #1f82d3, #27caea);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lychee.GUI">
+  <children>
+     <TextField fx:id="keywordEntry" layoutX="233.0" layoutY="32.0" promptText="&quot;95747&quot;, &quot;Rocklin,ca&quot;" />
+     <Label fx:id="zipcodeLabel" layoutX="158.0" layoutY="36.0" text="zip/city,state:" />
+     <Label fx:id="cityState" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="201.0">
+        <font>
+           <Font size="17.0" />
+        </font></Label>
+     <Label fx:id="temperature" alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="120.0">
+        <font>
+           <Font size="18.0" />
+        </font></Label>
+     <Label fx:id="weatherConditionsLabel" layoutX="391.0" layoutY="94.0" text="Weather Conditions:">
+        <font>
+           <Font size="17.0" />
+        </font></Label>
+     <Button fx:id="fetch" layoutX="406.0" layoutY="32.0" mnemonicParsing="false" onAction="#fetchWeather" text="Fetch" />
+     <Label fx:id="currentConditions" layoutX="249.0" layoutY="67.0" text="Current Conditions:" />
+     <Label fx:id="temperatureLabel" layoutX="106.0" layoutY="95.0" text="Temperature:">
+        <font>
+           <Font size="18.0" />
+        </font></Label>
+     <Label fx:id="weatherConditions" alignment="CENTER" contentDisplay="CENTER" layoutX="423.0" layoutY="124.0">
+        <font>
+           <Font size="17.0" />
+        </font></Label>
+     <Label fx:id="cityStateLabel" layoutX="126.0" layoutY="176.0" text="City:">
+        <font>
+           <Font size="17.0" />
+        </font></Label>
+     <Button fx:id="CF" layoutX="476.0" layoutY="32.0" mnemonicParsing="false" onAction="#toggleTempUnit" text="°C" />
+     <AmbientLight color="CHARTREUSE" lightOn="true" />
+     <ImageView fx:id="weatherConditionImage" fitHeight="101.0" fitWidth="149.0" layoutX="240.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+     <ImageView fx:id="mapImage" fitHeight="256.0" fitWidth="256.0" layoutX="26.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" />
+     <GridPane layoutX="331.0" layoutY="293.0" prefHeight="101.0" prefWidth="229.0">
+       <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       </columnConstraints>
+       <rowConstraints>
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       </rowConstraints>
+        <children>
+           <Label fx:id="date1" GridPane.rowIndex="1">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="date2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="date3" GridPane.columnIndex="2" GridPane.rowIndex="1">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="maxTemp1" GridPane.rowIndex="2">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="maxTemp2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="maxTemp3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="minTemp1" GridPane.rowIndex="3">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="minTemp2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="minTemp3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <ImageView fx:id="imageOne" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+           <ImageView fx:id="imageTwo" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+           <ImageView id="ImageOne" fx:id="imageThree" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+        </children>
+     </GridPane>
+     <GridPane layoutX="346.0" layoutY="453.0">
+       <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       </columnConstraints>
+       <rowConstraints>
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       </rowConstraints>
+        <children>
+           <Label fx:id="date4" GridPane.rowIndex="1">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="date5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="maxTemp4" GridPane.rowIndex="2">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="maxTemp5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="minTemp4" GridPane.rowIndex="3">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <Label fx:id="minTemp5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <font>
+                 <Font size="18.0" />
+              </font></Label>
+           <ImageView id="ImageOne" fx:id="imageFour" fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+           <ImageView id="ImageOne" fx:id="imageFive" fitHeight="30.0" fitWidth="35.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+        </children>
+     </GridPane>
+     <Label fx:id="errorlabel" layoutX="135.0" layoutY="260.0" textFill="#bf0a0a">
+        <font>
+           <Font size="18.0" />
+        </font>
+     </Label>
+  </children>
+</Pane>
+
